@@ -6,6 +6,14 @@ Rails.application.routes.draw do
 
   resources :nhanviens
 
+  namespace :categories do
+    match "/" => "base#index", :via => :get
+
+    resources :vungbvs do
+      get "delete"
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

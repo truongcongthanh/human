@@ -1,0 +1,14 @@
+<div class="modal-header">
+  <h4>Xác nhận xóa</h4>
+</div>
+<div class="modal-body">
+  Bạn có muốn xóa thông tin này hay không?
+</div>
+<div class="modal-footer">
+  <%= link_to categories_vungbv_path(@vungbv), method: :delete, :data => {remote: true}, class: "btn btn-danger" do %>
+      <i class="glyphicon glyphicon-ok-sign"></i> Đồng ý
+  <% end %>
+  <%= link_to categories_vungbvs_path, class: "btn btn-default", data: {dismiss: "modal"} do %>
+      <i class="glyphicon glyphicon-remove-sign"></i> Không
+  <% end %>
+</div>

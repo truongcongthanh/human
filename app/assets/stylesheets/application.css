@@ -39,10 +39,6 @@ header h2.tagline .taglineEm {
     font-weight: bold;
 }
 
-.row{
-    margin: 0;
-}
-
 #sidebar .panel-group{
     width: 100%;
 }
