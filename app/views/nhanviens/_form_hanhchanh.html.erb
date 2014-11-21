@@ -1,0 +1,245 @@
+<%= form_for @nhanvien, :data => {:remote => true}, :html => {:class => "form-horizontal", :role => "form"} do |f| %>
+    <ul class="errors"></ul>
+    <div class="col-sm-12">
+      <fieldset>
+        <div class="col-sm-3 paddingright0 ">
+          <div class="thumbnail marginbottom10">
+            <img src="/assets/male.jpg">
+          </div>
+          <button type="button" class="btn btn-default btn-group-justified">Hình đại diện</button>
+        </div>
+        <div class="col-sm-9 paddingleft0   ">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group-sm">
+                <label for="nhanvien_manv">Mã nhân viên</label>
+                <%= f.text_field :manv, class: "form-control input-sm" %>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group-sm">
+                <label for="nhanvien_machamcong">Mã chấm công</label>
+                <%= f.text_field :machamcong, class: "form-control input-sm" %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="form-group-sm">
+                <label for="nhanvien_ho">Họ và tên đệm</label>
+                <%= f.text_field :ho, class: "form-control input-sm" %>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group-sm">
+                <label for="nhanvien_ten">Tên</label>
+                <%= f.text_field :ten, class: "form-control input-sm" %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group-sm">
+                <label for="nhanvien_gioitinh_id">Giới tính</label>
+                <%= f.collection_select(:gioitinh_id, Gioitinh.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group-sm">
+                <label for="nhanvien_ngaysinh">Ngày sinh</label>
+                <%= f.text_field :ngaysinh, :value => (@nhanvien.ngaysinh.blank? ? '' : @nhanvien.ngaysinh.strftime("%d/%m/%Y")), class: "form-control input-sm" %>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group-sm">
+                <label for="nhanvien_ngaysinh">Năm sinh</label>
+                <%= f.text_field :namsinh, class: "form-control input-sm" %>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group-sm">
+              <label for="nhanvien_noisinh">Nơi sinh</label>
+              <%= f.text_field :noisinh, class: "form-control input-sm" %>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group-sm">
+              <label for="nhanvien_nguyenquan">Nguyên quán</label>
+              <%= f.text_field :nguyenquan, class: "form-control input-sm" %>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <fieldset>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="form-group-sm">
+                <label for="nhanvien_socmnd">Số CMND</label>
+                <%= f.text_field :socmnd, class: "form-control input-sm" %>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group-sm">
+                <label for="nhanvien_ngaycapcmnd">Ngày cấp</label>
+                <%= f.text_field :ngaycapcmnd, :value => (@nhanvien.ngaycapcmnd.blank? ? '' : @nhanvien.ngaycapcmnd.strftime("%d/%m/%Y")),class: "form-control input-sm" %>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group-sm">
+                <label for="nhanvien_noicapcmnd">Nơi cấp</label>
+                <%= f.text_field :noicapcmnd, class: "form-control input-sm" %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group-sm">
+                <label for="nhanvien_sohochieu">Số hộ chiếu</label>
+                <%= f.text_field :sohochieu, class: "form-control input-sm" %>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group-sm">
+                <label for="nhanvien_ngaycaphochieu">Ngày cấp</label>
+                <%= f.text_field :ngaycaphochieu, :value => (@nhanvien.ngaycaphochieu.blank? ? '' : @nhanvien.ngaycaphochieu.strftime("%d/%m/%Y")), class: "form-control input-sm" %>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group-sm">
+                <label for="nhanvien_ngayhethanhochieu">Ngày hết hạn</label>
+                <%= f.text_field :ngayhethanhochieu, :value => (@nhanvien.ngayhethanhochieu.blank? ? '' : @nhanvien.ngayhethanhochieu.strftime("%d/%m/%Y")), class: "form-control input-sm" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="form-group-sm">
+              <label for="nhanvien_noicaphochieu">Nơi cấp hộ chiếu</label>
+              <%= f.text_field :noicaphochieu, class: "form-control input-sm" %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group-sm">
+                <label for="nhanvien_honnhan_id">Tình trạng hôn nhân</label>
+                <%= f.collection_select(:honnhan_id, Honnhan.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group-sm">
+                <label for="nhanvien_dmquocgia_id">Quốc tịch</label>
+                <%= f.collection_select(:dmquocgia_id, Dmquocgia.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group-sm">
+                <label for="nhanvien_btddt_id">Dân tộc</label>
+                <%= f.collection_select(:btddt_id, Btddt.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group-sm">
+                <label for="nhanvien_tongiao_id">Tôn giáo</label>
+                <%= f.collection_select(:tongiao_id, Tongiao.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group-sm">
+                <label for="nhanvien_thanhphangiadinh_id">Thành phần gia đình</label>
+                <%= f.collection_select(:thanhphangiadinh_id, Thanhphangiadinh.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group-sm">
+                <label for="nhanvien_thanhphanbanthan_id">Thành phần bản thân</label>
+                <%= f.collection_select(:thanhphanbanthan_id, Thanhphanbanthan.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="col-sm-6">
+        <fieldset>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group-sm">
+                <label for="nhanvien_trinhdohocvan_id">Trình độ văn hóa</label>
+                <%= f.collection_select(:trinhdohocvan_id, Trinhdohocvan.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group-sm">
+                <label for="nhanvien_trinhdodaotao_id">Trình độ đào tạo</label>
+                <%= f.collection_select(:trinhdodaotao_id, Trinhdodaotao.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group-sm">
+                <label for="nhanvien_noidaotao">Nơi đào tạo</label>
+                <%= f.text_field :noidaotao, class: "form-control input-sm" %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group-sm">
+                <label for="nhanvien_khoa">Khoa</label>
+                <%= f.text_field :khoadaotao, class: "form-control input-sm" %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group-sm">
+                <label for="nhanvien_khoa">Chuyên ngành</label>
+                <%= f.text_field :chuyennganhdaotao, class: "form-control input-sm" %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group-sm">
+                <label for="nhanvien_namtotnghiep">Năm tốt nghiệp</label>
+                <%= f.text_field :namtotnghiep, class: "form-control input-sm" %>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group-sm">
+                <label for="nhanvien_xeploaitotnghiep">Xếp loại tốt nghiệp</label>
+                <%= f.text_field :xeploaitotnghiep, class: "form-control input-sm" %>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <label for="nhanvien_trinhdodaotao_id">Nghề nghiệp</label>
+              <%= f.collection_select(:nghenghiep_id, Nghenghiep.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group pull-right">
+          <%= link_to nhanviens_path, class: "btn btn-danger", data: {:remote => true} do %>
+              <%= t "back" %>
+          <% end %>
+          <button type="submit" class="btn btn-primary">
+            <%= t "save" %>
+          </button>
+        </div>
+      </div>
+    </div>
+<% end %>

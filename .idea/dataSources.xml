@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2226966170">
+    <data-source source="LOCAL" name="Rails human: development" uuid="0efa2e2f-8a44-4278-b7b7-96999640f48c">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5433/hrm</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails human: test" uuid="65c01905-ff90-4037-aaa0-91a3008b7e32">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:human_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails human: production" uuid="3e717d64-dc29-415b-acd9-a979a0572c0f">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:human_production</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>

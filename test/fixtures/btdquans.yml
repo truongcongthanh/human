@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ten_vi: MyString
+  ten_en: MyString
+  ten_ot: MyString
+  btdtt_id: 
+
+two:
+  ten_vi: MyString
+  ten_en: MyString
+  ten_ot: MyString
+  btdtt_id: 

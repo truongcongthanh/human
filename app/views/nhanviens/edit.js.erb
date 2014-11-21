@@ -1,0 +1,124 @@
+$(".form-index").html("<%= escape_javascript(render 'edit') %>");
+$(".form-index-header").html("<span class='glyphicon glyphicon-edit'></span>Cập nhật thông tin nhân viên");
+
+// Kiểm tra có phải là đảng viên hay không
+if($("#nhanvien_dangvien").is(':checked')){
+    $("#nhanvien_ngaydubidang").removeAttr("disabled", "disable");
+    $("#nhanvien_ngaychinhthucdang").removeAttr("disabled", "disable");
+    $("#nhanvien_dang_chucvu_id").removeAttr("disabled", "disable");
+    $("#nhanvien_noiketnapdang").removeAttr("disabled", "disable");
+}
+
+$("#nhanvien_dangvien").click(function(event){
+    var thischeck = $(this)
+    if (thischeck.is(':checked')) {
+        $("#nhanvien_ngaydubidang").removeAttr("disabled", "disable");
+        $("#nhanvien_ngaychinhthucdang").removeAttr("disabled", "disable");
+        $("#nhanvien_dang_chucvu_id").removeAttr("disabled", "disable");
+        $("#nhanvien_noiketnapdang").removeAttr("disabled", "disable");
+    } else {
+        $("#nhanvien_ngaydubidang").val("");
+        $("#nhanvien_ngaydubidang").attr("disabled", "disable");
+        $("#nhanvien_ngaychinhthucdang").val("");
+        $("#nhanvien_ngaychinhthucdang").attr("disabled", "disable");
+        $("#nhanvien_dang_chucvu_id").val("");
+        $("#nhanvien_dang_chucvu_id").attr("disabled", "disable");
+        $("#nhanvien_noiketnapdang").val("");
+        $("#nhanvien_noiketnapdang").attr("disabled", "disable");
+    }
+});
+// end kiểm tra đảng viên
+
+// Kiểm tra có phải là đảng viên hay không
+if($("#nhanvien_doanvien").is(':checked')){
+    $("#nhanvien_ngayvaodoan").removeAttr("disabled", "disable");
+    $("#nhanvien_doan_chucvu_id").removeAttr("disabled", "disable");
+    $("#nhanvien_noiketnapdoan").removeAttr("disabled", "disable");
+}
+
+$("#nhanvien_doanvien").click(function(event){
+    var thischeck = $(this)
+    if (thischeck.is(':checked')) {
+        $("#nhanvien_ngayvaodoan").removeAttr("disabled", "disable");
+        $("#nhanvien_doan_chucvu_id").removeAttr("disabled", "disable");
+        $("#nhanvien_noiketnapdoan").removeAttr("disabled", "disable");
+    } else {
+        $("#nhanvien_ngayvaodoan").val("");
+        $("#nhanvien_ngayvaodoan").attr("disabled", "disable");
+        $("#nhanvien_doan_chucvu_id").val("");
+        $("#nhanvien_doan_chucvu_id").attr("disabled", "disable");
+        $("#nhanvien_noiketnapdoan").val("");
+        $("#nhanvien_noiketnapdoan").attr("disabled", "disable");
+    }
+});
+// end kiểm tra đảng viên
+
+
+
+// Kiểm tra có phải là quân nhân hay không?
+if ($("#nhanvien_quannhan").is(':checked')) {
+    $("#nhanvien_ngaynhapngu").removeAttr("disabled", "disable");
+    $("#nhanvien_chucvutrongquanngu").removeAttr("disabled", "disable");
+    $("#nhanvien_quanham").removeAttr("disabled", "disable");
+    $("#nhanvien_binhchung").removeAttr("disabled", "disable");
+    $("#nhanvien_donvinhapngu").removeAttr("disabled", "disable");
+    $("#nhanvien_ngayxuatngu").removeAttr("disabled", "disable");
+    $("#nhanvien_lydoxuatngu").removeAttr("disabled", "disable");
+}
+
+$("#nhanvien_quannhan").click(function (event) {
+    var thischeck = $(this)
+    if (thischeck.is(':checked')) {
+        $("#nhanvien_ngaynhapngu").removeAttr("disabled", "disable");
+        $("#nhanvien_chucvutrongquanngu").removeAttr("disabled", "disable");
+        $("#nhanvien_quanham").removeAttr("disabled", "disable");
+        $("#nhanvien_binhchung").removeAttr("disabled", "disable");
+        $("#nhanvien_donvinhapngu").removeAttr("disabled", "disable");
+        $("#nhanvien_ngayxuatngu").removeAttr("disabled", "disable");
+        $("#nhanvien_lydoxuatngu").removeAttr("disabled", "disable");
+    } else {
+        $("#nhanvien_ngaynhapngu").val("");
+        $("#nhanvien_ngaynhapngu").attr("disabled", "disable");
+        $("#nhanvien_chucvutrongquanngu").val("");
+        $("#nhanvien_chucvutrongquanngu").attr("disabled", "disable");
+        $("#nhanvien_quanham").val("");
+        $("#nhanvien_quanham").attr("disabled", "disable");
+        $("#nhanvien_binhchung").val("");
+        $("#nhanvien_binhchung").attr("disabled", "disable");
+        $("#nhanvien_donvinhapngu").val("");
+        $("#nhanvien_donvinhapngu").attr("disabled", "disable");
+        $("#nhanvien_ngayxuatngu").val("");
+        $("#nhanvien_ngayxuatngu").attr("disabled", "disable");
+        $("#nhanvien_lydoxuatngu").val("");
+        $("#nhanvien_lydoxuatngu").attr("disabled", "disable");
+    }
+});
+// end Kiểm tra quân nhân
+
+// Kiểm tra thương binh
+if($("#nhanvien_thuongbinh").is(':checked')){
+    $("#nhanvien_ngaythamgiacachmang").removeAttr("disabled", "disable");
+    $("#nhanvien_hangthuongbinh").removeAttr("disabled", "disable");
+    $("#nhanvien_tylesuygiamlaodong").removeAttr("disabled", "disable");
+    $("#nhanvien_huongchedo").removeAttr("disabled", "disable");
+}
+
+$("#nhanvien_thuongbinh").click(function(event){
+    var thischeck = $(this)
+    if (thischeck.is(':checked')) {
+        $("#nhanvien_ngaythamgiacachmang").removeAttr("disabled", "disable");
+        $("#nhanvien_hangthuongbinh").removeAttr("disabled", "disable");
+        $("#nhanvien_tylesuygiamlaodong").removeAttr("disabled", "disable");
+        $("#nhanvien_huongchedo").removeAttr("disabled", "disable");
+    } else {
+        $("#nhanvien_ngaythamgiacachmang").val("");
+        $("#nhanvien_ngaythamgiacachmang").attr("disabled", "disable");
+        $("#nhanvien_hangthuongbinh").val("");
+        $("#nhanvien_hangthuongbinh").attr("disabled", "disable");
+        $("#nhanvien_tylesuygiamlaodong").val("");
+        $("#nhanvien_tylesuygiamlaodong").attr("disabled", "disable");
+        $("#nhanvien_huongchedo").removeAttr("checked","checked");
+        $("#nhanvien_huongchedo").attr("disabled", "disable");
+    }
+});
+// End kiểm tra thương tật

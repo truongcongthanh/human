@@ -1,0 +1,58 @@
+// Place all the styles related to the nhanviens controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.colpadding{
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.paddingright5 {
+  padding-right: 5px;
+}
+
+.paddingleft0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.paddingtop0{
+  padding-top: 0;
+}
+
+.marginbottom10{
+  margin-bottom: 10px;
+}
+.form-group{
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 7px;
+}
+
+.marginleft{
+  margin-left: -50px;
+}
+
+fieldset{
+  margin-left: -5px;
+  margin-right: -5px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid ;
+  border-radius: 5px;
+}
+
+label{
+  font-weight: 500;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+legend{
+  font-weight: 700;
+  font-size: 15px;
+}
+.checkbox{
+  padding-top: 0 !important;
+  padding-bottom: 5px !important;
+}
+

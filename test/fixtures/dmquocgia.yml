@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ma: MyString
+  ten_vi: MyString
+  ten_en: MyString
+  ten_ot: MyString
+  iso: MyString
+
+two:
+  ma: MyString
+  ten_vi: MyString
+  ten_en: MyString
+  ten_ot: MyString
+  iso: MyString

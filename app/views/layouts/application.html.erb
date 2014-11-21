@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Human</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header class="header">
+  <%= render 'layouts/header' %>
+</header>
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <%= render 'layouts/navigation' %>
+</nav>
+<div id="page-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+        <%= yield %>
+      </div>
+      <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->
+<footer>
+  <%= render 'layouts/footer' %>
+</footer>
+</body>
+</html>

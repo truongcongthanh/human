@@ -1,0 +1,9 @@
+$("ul.errors").html("")
+<% if @nhanvien.errors.any? %>
+<% @nhanvien.errors.full_messages.each do |message| %>
+$("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+<% end %>
+<% else %>
+$(".form-index").html("<%= escape_javascript(render 'table_nhanviens') %>")
+$(".form-index-header").html("<span class='glyphicon glyphicon-list-alt'></span>Danh sách nhân viên");
+<% end %>

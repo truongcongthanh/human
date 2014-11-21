@@ -1,0 +1,59 @@
+<div class="navbar-header">
+  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <%= render 'navbar_brand' %>
+</div>
+<!-- /.navbar-header -->
+<ul class="nav navbar-nav">
+  <%= render 'navigation_links' %>
+</ul>
+<ul class="nav navbar-top-links navbar-right">
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+      <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-user">
+      <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+      </li>
+      <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+      </li>
+      <li class="divider"></li>
+      <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+      </li>
+    </ul>
+    <!-- /.dropdown-user -->
+  </li>
+  <!-- /.dropdown -->
+</ul>
+<!-- /.navbar-top-links -->
+
+<div class="navbar-default sidebar" role="navigation">
+  <div class="sidebar-nav navbar-collapse">
+    <ul class="nav" id="side-menu">
+      <li>
+        <a href="<%= root_path %>"><i class="fa  fa-h-square fa-fw"></i> Trang chủ</a>
+      </li>
+      <li>
+        <a href="<%= nhanviens_path %>"><i class="fa fa-group fa-fw"></i> Quản lý nhân viên</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-calendar fa-fw"></i> Lịch làm việc</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-table fa-fw"></i> Quản lý danh mục</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-wrench fa-fw"></i> Cấu hình</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-user fa-fw"></i> Quản lý người dùng</a>
+      </li>
+    </ul>
+  </div>
+  <!-- /.sidebar-collapse -->
+</div>
+<!-- /.navbar-static-side -->

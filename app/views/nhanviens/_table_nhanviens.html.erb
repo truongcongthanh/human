@@ -1,0 +1,32 @@
+<table class="table table-tripped table-hover">
+  <thead class="bg-primary">
+  <tr>
+    <th>Mã NV</th>
+    <th>Họ và tên</th>
+    <th>Ngày sinh</th>
+    <th>Điện thoại</th>
+    <th>Email</th>
+    <th>&nbsp;</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @nhanviens.each do |nhanvien| %>
+      <tr>
+        <td><%= nhanvien.manv %></td>
+        <td><%= nhanvien.ho + ' ' + nhanvien.ten %></td>
+        <% if nhanvien.ngaysinh.blank? %>
+            <td><%= nhanvien.namsinh %></td>
+        <% else %>
+            <td><%= nhanvien.ngaysinh.strftime("%d/%m/%Y") %></td>
+        <% end %>
+        <td><%= nhanvien.dtdd %></td>
+        <td><%= nhanvien.emailcanhan %></td>
+        <td style="width: 30px;">
+          <%= link_to edit_nhanvien_path(nhanvien), :data => {remote: true} do %>
+              <i class="glyphicon glyphicon-pencil"></i>
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

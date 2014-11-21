@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require bootstrap.min
+ *= require sb-admin-2
+ *= require font-awesome.min
+ *= require metisMenu.min
+ */
+header {
+    background: repeat-x scroll 0 0 #718ba6;
+}
+
+header h2.tagline {
+    color: #d4dce4;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    left: 172px;
+    position: absolute;
+    text-align: left;
+    text-transform: uppercase;
+    top: -12px;
+}
+
+header h2.tagline .taglineEm {
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.row{
+    margin: 0;
+}
+
+#sidebar .panel-group{
+    width: 100%;
+}
+
+.panel-title {
+    font-size: 13px;
+}
+
+.panel-heading {
+    padding-left: 10px;
+    padding-right: 0;
+}
+
+.glyphicon {
+    margin-right: 10px;
+}
+
+.panel-body {
+    padding: 0px;
+}
+
+.panel-body table tr td {
+    padding-left: 15px
+}
+
+.panel-body .table {
+    margin-bottom: 0px;
+}
+
+#sidebar-item li {
+    border: 0;
+    background: transparent;
+}

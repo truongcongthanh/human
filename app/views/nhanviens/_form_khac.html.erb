@@ -1,0 +1,313 @@
+<%= form_for @nhanvien, :data => {:remote => true}, :html => {:class => "form-horizontal", :role => "form"} do |f| %>
+    <ul class="errors"></ul>
+    <div class="col-sm-12">
+      <fieldset class="paddingtop0">
+        <legend>Thông tin chính trị</legend>
+        <div class="col-sm-6">
+          <div class="form-group-sm">
+            <div class="col-sm-offset-3 col-sm-9">
+              <div class="checkbox">
+                <label>
+                  <%= f.check_box :dangvien %> Là Đảng viên
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="nhanvien_ngaydubidang">Ngày dự bị</label>
+
+            <div class="col-sm-3">
+              <%= f.text_field :ngaydubidang, :value => (@nhanvien.ngaydubidang.blank? ? '' : @nhanvien.ngaydubidang.strftime("%d/%m/%Y")), :class => "form-control input-sm", :disabled => true %>
+            </div>
+            <label class="col-sm-3 control-label" for="nhanvien_ngaychinhthucdang">Ngày chính thức</label>
+
+            <div class="col-sm-3">
+              <%= f.text_field :ngaychinhthucdang, :value => (@nhanvien.ngaychinhthucdang.blank? ? '' : @nhanvien.ngaychinhthucdang.strftime("%d/%m/%Y")), :class => "form-control input-sm", :disabled => true %>
+            </div>
+          </div>
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="nhanvien_dang_chucvu_id">Chức vụ</label>
+
+            <div class="col-sm-9">
+              <%= f.collection_select(:dang_chucvu_id, Chucvu.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm", :disabled => true}) %>
+            </div>
+          </div>
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="nhanvien_noiketnapdang">Nơi kết nạp</label>
+
+            <div class="col-sm-9">
+              <%= f.text_field :noiketnapdang, :class => "form-control input-sm", :disabled => true %>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group-sm">
+            <div class="col-sm-offset-3 col-sm-9">
+              <div class="checkbox">
+                <label>
+                  <%= f.check_box :doanvien %> Là Đoàn viên
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="nhanvien_ngayvaodoan">Ngày vào Đoàn</label>
+
+            <div class="col-sm-9">
+              <%= f.text_field :ngayvaodoan, :value => (@nhanvien.ngayvaodoan.blank? ? '' : @nhanvien.ngayvaodoan.strftime("%d/%m/%Y")), :class => "form-control input-sm", :disabled => true %>
+            </div>
+          </div>
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="nhanvien_doan_chucvu_id">Chức vụ</label>
+
+            <div class="col-sm-9">
+              <%= f.collection_select(:doan_chucvu_id, Chucvu.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm", :disabled => true}) %>
+            </div>
+          </div>
+          <div class="form-group form-group-sm">
+            <label class="col-sm-3 control-label" for="nhanvien_noiketnapdoan">Nơi kết nạp</label>
+
+            <div class="col-sm-9">
+              <%= f.text_field :noiketnapdoan, :class => "form-control input-sm", :disabled => true %>
+            </div>
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+    <div class="col-sm-12">
+      <fieldset class="paddingtop0">
+        <legend>Thông tin quân sự</legend>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group-sm">
+              <div class="col-sm-offset-3 col-sm-9">
+                <div class="checkbox">
+                  <label>
+                    <%= f.check_box :quannhan %> Là Quân nhân
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group form-group-sm">
+              <label class="col-sm-3 control-label" for="nhanvien_ngaynhapngu">Ngày nhập ngũ</label>
+
+              <div class="col-sm-9">
+                <%= f.text_field :ngaynhapngu, :value => (@nhanvien.ngaynhapngu.blank? ? '' : @nhanvien.ngaynhapngu.strftime("%d/%m/%Y")), :class => "form-control input-sm", :disabled => true %>
+              </div>
+            </div>
+            <div class="form-group form-group-sm">
+              <label class="col-sm-3 control-label" for="nhanvien_chucvutrongquanngu">Chức vụ</label>
+
+              <div class="col-sm-9">
+                <%= f.text_field :chucvutrongquanngu, :class => "form-control input-sm", :disabled => true %>
+              </div>
+            </div>
+            <div class="form-group form-group-sm">
+              <label class="col-sm-3 control-label" for="nhanvien_quanham">Quân hàm</label>
+
+              <div class="col-sm-9">
+                <%= f.text_field :quanham, :class => "form-control input-sm", :disabled => true %>
+              </div>
+            </div>
+            <div class="form-group form-group-sm">
+              <label class="col-sm-3 control-label" for="nhanvien_binhchung">Binh chủng</label>
+
+              <div class="col-sm-9">
+                <%= f.text_field :binhchung, :class => "form-control input-sm", :disabled => true %>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group form-group-sm">
+              <label class="col-sm-3 control-label" for="nhanvien_donvinhapngu">Đơn vị</label>
+
+              <div class="col-sm-9">
+                <%= f.text_field :donvinhapngu, :class => "form-control input-sm", :disabled => true %>
+              </div>
+            </div>
+            <div class="form-group form-group-sm">
+              <label class="col-sm-3 control-label" for="nhanvien_ngayxuatngu">Ngày xuất ngũ</label>
+
+              <div class="col-sm-9">
+                <%= f.text_field :ngayxuatngu, :value => (@nhanvien.ngayxuatngu.blank? ? '' : @nhanvien.ngayxuatngu.strftime("%d/%m/%Y")), :class => "form-control input-sm", :disabled => true %>
+              </div>
+            </div>
+            <div class="form-group form-group-sm">
+              <label class="col-sm-3 control-label" for="nhanvien_lydoxuatngu">Lý do</label>
+
+              <div class="col-sm-9">
+                <%= f.text_area :lydoxuatngu, :class => "form-control input-sm", :disabled => true %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <fieldset class="paddingtop0">
+          <legend>Thông tin thương tật</legend>
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="form-group form-group-sm">
+                <div class="col-sm-offset-1 col-sm-11">
+                  <div class="checkbox">
+                    <label>
+                      <%= f.check_box :thuongbinh %> Là Thương binh, bệnh binh
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group form-group-sm">
+                <label class="col-sm-5 control-label" for="nhanvien_ngaythamgiacachmang">Ngày tham gia cách mạng</label>
+
+                <div class="col-sm-7">
+                  <%= f.text_field :ngaythamgiacachmang, :value => (@nhanvien.ngaythamgiacachmang.blank? ? '' : @nhanvien.ngaythamgiacachmang.strftime("%d/%m/%Y")), :class => "form-control input-sm", :disabled => true %>
+                </div>
+              </div>
+              <div class="form-group form-group-sm">
+                <label class="col-sm-5 control-label" for="nhanvien_hangthuongbinh">Hạng thương binh</label>
+
+                <div class="col-sm-7">
+                  <%= f.text_field :hangthuongbinh, :class => "form-control input-sm", :disabled => true %>
+                </div>
+              </div>
+              <div class="form-group form-group-sm">
+                <label class="col-sm-5 control-label" for="nhanvien_tylesuygiamlaodong">Tỷ lệ suy giảm lao động</label>
+
+                <div class="col-sm-7">
+                  <%= f.text_field :tylesuygiamlaodong, :class => "form-control input-sm", :disabled => true %>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group form-group-sm">
+                <div class="col-sm-offset-6 col-sm-6">
+                  <div class="checkbox">
+                    <label>
+                      <%= f.check_box :huongchedo, :disabled => true %> Hưởng chế độ
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+      <div class="col-sm-6">
+        <fieldset class="paddingtop0">
+          <legend>Thông tin y tế</legend>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group form-group-sm">
+                <label class="col-sm-2 control-label" for="nhanvien_nhommau">Nhóm máu</label>
+
+                <div class="col-sm-2">
+                  <%= f.text_field :nhommau, :class => "form-control input-sm" %>
+                </div>
+                <label class="col-sm-2 control-label" for="nhanvien_chieucao">Chiều cao</label>
+
+                <div class="col-sm-2">
+                  <%= f.text_field :chieucao, :class => "form-control input-sm" %>
+                </div>
+                <label class="col-sm-2 control-label" for="nhanvien_cannang">Cân nặng</label>
+
+                <div class="col-sm-2">
+                  <%= f.text_field :cannang, :class => "form-control input-sm" %>
+                </div>
+              </div>
+              <div class="form-group form-group-sm">
+                <label class="col-sm-2 control-label" for="nhanvien_thongtinsuckhoe">Sức khỏe</label>
+
+                <div class="col-sm-10">
+                  <%= f.text_field :thongtinsuckhoe, :class => "form-control input-sm" %>
+                </div>
+              </div>
+              <div class="form-group form-group-sm">
+                <label class="col-sm-2 control-label" for="nhanvien_canluuysuckhoe">Lưu ý</label>
+
+                <div class="col-sm-10">
+                  <%= f.text_field :canluuysuckhoe, :class => "form-control input-sm" %>
+                </div>
+              </div>
+              <div class="form-group form-group-sm">
+                <label class="col-sm-2 control-label" for="nhanvien_benhtat">Bệnh tật</label>
+
+                <div class="col-sm-10">
+                  <%= f.text_field :benhtat, :class => "form-control input-sm" %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group form-group-sm">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                  <label>
+                    <%= f.check_box :nguoikhuyettat %> Là người khuyết tật
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="col-sm-6">
+          <div class="form-group form-group-sm">
+            <label class="col-sm-4 control-label" for="nhanvien_muctieucanhan">Mục tiêu cá nhân</label>
+
+            <div class="col-sm-8">
+              <%= f.text_area :muctieucanhan, :class => "form-control input-sm" %>
+            </div>
+          </div>
+          <div class="form-group form-group-sm">
+            <label class="col-sm-4 control-label" for="nhanvien_sothich">Sở thích</label>
+
+            <div class="col-sm-8">
+              <%= f.text_area :sothich, :class => "form-control input-sm" %>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group form-group-sm">
+            <label class="col-sm-4 control-label" for="nhanvien_diemmanh">Điểm mạnh</label>
+
+            <div class="col-sm-8">
+              <%= f.text_area :diemmanh, :class => "form-control input-sm" %>
+            </div>
+          </div>
+          <div class="form-group form-group-sm">
+            <label class="col-sm-4 control-label" for="nhanvien_diemyeu">Điểm yếu</label>
+
+            <div class="col-sm-8">
+              <%= f.text_area :diemyeu, :class => "form-control input-sm" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group pull-right">
+          <%= link_to nhanviens_path, class: "btn btn-danger", data: {remote: true} do %>
+              <%= t "back" %>
+          <% end %>
+          <button type="submit" class="btn btn-primary">
+            <%= t "save" %>
+          </button>
+        </div>
+      </div>
+    </div>
+<% end %>
