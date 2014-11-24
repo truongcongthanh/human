@@ -2,9 +2,10 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="Rails human: development" uuid="0efa2e2f-8a44-4278-b7b7-96999640f48c">
-      <first-sync>true</first-sync>
       <user-name>medisoft</user-name>
       <user-password>dfc6dfc3dfc4dfc1dfd9df9bdf93df98df9a</user-password>
+      <schema-pattern>hrm.pg_catalog hrm.public</schema-pattern>
+      <default-schemas>hrm.pg_catalog hrm.public</default-schemas>
     </data-source>
     <data-source name="Rails human: test" uuid="65c01905-ff90-4037-aaa0-91a3008b7e32">
       <first-sync>true</first-sync>

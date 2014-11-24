@@ -1,0 +1,44 @@
+<%= form_for ([:categories, @quoctich]), :data => {remote: true}, :html => {:class => "form-horizontal", role: "form"} do |f| %>
+    <div class="row text-center" style="padding: 15px;">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label for="dmquocgia_ma_ten_vn" class="col-sm-2 control-label">Mã Quốc gia</label>
+          <div class="col-sm-10">
+            <%= f.text_field :ma, :class => "form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="dmquocgia_ma_ten_vn" class="col-sm-2 control-label">Tên VN</label>
+          <div class="col-sm-10">
+            <%= f.text_field :ten_vi, :class => "form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="dmquocgia_ma_ten_en" class="col-sm-2 control-label">Tên EN</label>
+          <div class="col-sm-10">
+            <%= f.text_field :ten_en, :class => "form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="dmquocgia_ma_ten_ot" class="col-sm-2 control-label">Tên JP</label>
+          <div class="col-sm-10">
+            <%= f.text_field :ten_ot, :class => "form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="dmquocgia_ma_ten_vn" class="col-sm-2 control-label">Mã ISO</label>
+          <div class="col-sm-10">
+            <%= f.text_field :iso, :class => "form-control" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <%= link_to categories_dmquocgia_path, class: "btn btn-default", data: {dismiss: "modal"} do %>
+          <%= t "back" %>
+      <% end %>
+      <button type="submit" class="btn btn-primary">
+        <%= t "save" %>
+      </button>
+    </div>
+<% end %>

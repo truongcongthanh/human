@@ -133,7 +133,7 @@
             <div class="col-sm-6">
               <div class="form-group-sm">
                 <label for="nhanvien_dmquocgia_id">Quốc tịch</label>
-                <%= f.collection_select(:dmquocgia_id, Dmquocgia.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
+                <%= f.collection_select(:dmquoctich_id, Dmquoctich.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
               </div>
             </div>
           </div>

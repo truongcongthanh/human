@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 20141117035811) do
 
   add_index "chucvus", ["nhomchucvu_id"], name: "index_chucvus_on_nhomchucvu_id", using: :btree
 
-  create_table "dmquocgia", force: true do |t|
+  create_table "dmquoctich", force: true do |t|
     t.string   "ma"
     t.string   "ten_vi"
     t.string   "ten_en"
@@ -161,7 +161,7 @@ ActiveRecord::Schema.define(version: 20141117035811) do
     t.integer  "thanhphanbanthan_id"
     t.integer  "btddt_id"
     t.integer  "tongiao_id"
-    t.integer  "dmquocgia_id"
+    t.integer  "dmquoctich_id"
     t.integer  "trinhdohocvan_id"
     t.integer  "trinhdodaotao_id"
     t.string   "noidaotao"
@@ -315,7 +315,6 @@ ActiveRecord::Schema.define(version: 20141117035811) do
     t.string   "ten_vi"
     t.string   "ten_en"
     t.string   "ten_ot"
-    t.string   "string"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

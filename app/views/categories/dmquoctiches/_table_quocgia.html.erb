@@ -1,0 +1,28 @@
+<table class="table table-tripped table-hover">
+  <thead>
+  <tr class="bg-primary">
+    <th>Mã</th>
+    <th>Tên Quốc gia</th>
+    <th>ISO</th>
+    <th>&nbsp;</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @quocgia.each do |f| %>
+      <tr>
+        <td><%= f.ma %></td>
+        <td><%= f.ten_vi %></td>
+        <td><%= f.iso %></td>
+        <td style="width: 60px;">
+          <%= link_to edit_categories_dmquocgium_path(f), :data => {remote: true}, :title => 'Cập nhật' do %>
+              <i class="fa fa-edit fa-fw"></i>
+          <% end %>
+          <%= link_to categories_dmquocgium_delete_path(f), data: {remote: true}, :title => 'Xóa' do %>
+              <i class="fa fa-trash-o fa-fw"></i>
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+  <tfoot></tfoot>
+</table>

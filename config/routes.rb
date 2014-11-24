@@ -12,6 +12,10 @@ Rails.application.routes.draw do
     resources :vungbvs do
       get "delete"
     end
+
+    resources :dmquoctiches do
+      get "delete"
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

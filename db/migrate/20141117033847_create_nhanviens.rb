@@ -22,7 +22,7 @@ class CreateNhanviens < ActiveRecord::Migration
       t.integer :thanhphanbanthan_id
       t.integer :btddt_id
       t.integer :tongiao_id
-      t.integer :dmquocgia_id
+      t.integer :dmquoctich_id
       t.integer :trinhdohocvan_id
       t.integer :trinhdodaotao_id
       t.string :noidaotao

@@ -28,7 +28,7 @@ class NhanviensController < ApplicationController
   private
   def param_nhanvien
     params.require(:nhanvien).permit(:manv, :machamcong, :ho, :ten, :gioitinh_id, :ngaysinh, :namsinh, :noisinh, :nguyenquan,
-     :socmnd, :ngaycapcmnd,:noicapcmnd, :sohochieu, :ngaycaphochieu, :ngayhethanhochieu, :noicaphochieu, :honnhan_id, :dmquocgia_id,
+     :socmnd, :ngaycapcmnd,:noicapcmnd, :sohochieu, :ngaycaphochieu, :ngayhethanhochieu, :noicaphochieu, :honnhan_id, :dmquoctich_idra,
      :btddt_id, :tongiao_id, :thanhphangiadinh_id, :thanhphanbanthan_id, :trinhdohocvan_id, :trinhdodaotao_id,
      :noidaotao, :khoadaotao, :chuyennganhdaotao, :namtotnghiep, :xeploaitotnghiep, :nghenghiep_id, :dtdd, :dtcoquan,
      :emailcanhan, :emailcoquan, :dtnharieng, :yahoo, :skype, :diachithuongtru, :thuongtru_btdtt_id, :thuongtru_btdquan_id,

@@ -1,0 +1,14 @@
+<h4>
+  <span class='fa fa-globe fa-fw'></span>Danh sách quốc gia
+  <%= link_to new_categories_dmquocgium_path, :data => {remote: true}, :class => "btn btn-link pull-right" do %>
+      <span class="fa fa-plus-square fa-fw"></span> Thêm mới
+  <% end %>
+</h4>
+<div class="form-index">
+  <%= render 'table_quocgia' %>
+</div>
+<div id="form-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div id="inner-form-modal" class="modal-content"></div>
+  </div>
+</div>
