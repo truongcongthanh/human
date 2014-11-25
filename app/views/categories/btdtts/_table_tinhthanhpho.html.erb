@@ -1,0 +1,32 @@
+<table class="table table-tripped table-hover">
+  <thead>
+  <tr class="bg-primary">
+    <th>Tỉnh/Thành phố</th>
+    <th>Vùng</th>
+    <th>&nbsp;</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @btdtts.each do |f| %>
+  <tr>
+    <td><%= f.ten_vi %></td>
+    <td><%= f.vungbv.ten_vi %></td>
+    <td style="width: 60px;">
+      <%= link_to edit_categories_btdtt_path(f), :data => {remote: true}, :title => 'Cập nhật' do %>
+          <i class="fa fa-edit fa-fw"></i>
+      <% end %>
+      <%= link_to categories_btdtt_delete_path(f), data: {remote: true}, :title => 'Xóa' do %>
+          <i class="fa fa-trash-o fa-fw"></i>
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+  </tbody>
+  <tfoot>
+  <tr class="text-center">
+    <td colspan="4">
+      <%= will_paginate @btdtts, renderer: BootstrapPagination::Rails %>
+    </td>
+  </tr>
+  </tfoot>
+</table>

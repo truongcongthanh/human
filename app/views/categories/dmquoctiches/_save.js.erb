@@ -1,0 +1,9 @@
+$("ul.errors").html("")
+<% if @dmquoctich.errors.any? %>
+<% @dmquoctich.errors.full_messages.each do |message| %>
+$("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+<% end %>
+<% else %>
+$(".form-index").html("<%= escape_javascript(render 'table_quoctich') %>")
+$("#form-modal").modal("hide")
+<% end %>

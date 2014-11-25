@@ -152,6 +152,8 @@
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.2, ruby-1.9.3-p545) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo-data (v1.2014.10, ruby-1.9.3-p545) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.5.3, ruby-1.9.3-p545) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="will_paginate (v3.0.7, ruby-1.9.3-p545) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="will_paginate-bootstrap (v1.0.1, ruby-1.9.3-p545) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />

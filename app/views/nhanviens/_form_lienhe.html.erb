@@ -13,21 +13,18 @@
             </div>
             <div class="form-group form-group-sm">
               <label class="col-sm-3 control-label" for="nhanvien_dtcoquan">ĐT cơ quan</label>
-
               <div class="col-sm-9">
                 <%= f.text_field :dtcoquan, :class => "form-control input-sm" %>
               </div>
             </div>
             <div class="form-group form-group-sm">
               <label class="col-sm-3 control-label" for="nhanvien_dtcoquan">Email cơ quan</label>
-
               <div class="col-sm-9">
                 <%= f.text_field :emailcoquan, :class => "form-control input-sm" %>
               </div>
             </div>
             <div class="form-group form-group-sm">
               <label class="col-sm-3 control-label" for="nhanvien_dtnharieng">ĐT nhà riêng</label>
-
               <div class="col-sm-9">
                 <%= f.text_field :dtnharieng, :class => "form-control input-sm" %>
               </div>
@@ -36,14 +33,12 @@
           <div class="col-sm-6">
             <div class="form-group form-group-sm">
               <label class="col-sm-3 control-label" for="nhanvien_emailcanhan">Email cá nhân</label>
-
               <div class="col-sm-9">
                 <%= f.text_field :emailcanhan, :class => "form-control input-sm" %>
               </div>
             </div>
             <div class="form-group form-group-sm">
               <label class="col-sm-3 control-label" for="nhanvien_yahoo">Yahoo</label>
-
               <div class="col-sm-9">
                 <%= f.text_field :yahoo, :class => "form-control input-sm" %>
               </div>
@@ -67,30 +62,26 @@
             <div class="col-sm-12">
               <div class="form-group form-group-sm">
                 <label class="col-sm-3 control-label" for="nhanvien_diachithuongtru">Địa chỉ</label>
-
                 <div class="col-sm-9">
                   <%= f.text_field :diachithuongtru, :class => "form-control input-sm" %>
                 </div>
               </div>
               <div class="form-group form-group-sm">
                 <label class="col-sm-3 control-label" for="nhanvien_thuongtru_btdtt_id">Tỉnh/TP</label>
-
                 <div class="col-sm-9">
                   <%= f.collection_select(:thuongtru_btdtt_id, Btdtt.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
                 </div>
               </div>
               <div class="form-group form-group-sm">
-                <label class="col-sm-3 control-label" for="nhanvien_thuongtru_btdquan_id">Quận/Huyện</label>
-
+                <label class="col-sm-3 control-label" for="thuongtru_btdquan_id_btdtt_id">Quận/Huyện</label>
                 <div class="col-sm-9">
-                  <%= grouped_collection_select(:thuongtru_btdquan_id, :btdtt_id, Btdtt.order(:ten_vi), :btdquans, :ten_vi, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
+                  <%= f.grouped_collection_select(:thuongtru_btdquan_id, Btdtt.order(:ten_vi), :btdquans, :ten_vi, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
                 </div>
               </div>
               <div class="form-group form-group-sm">
-                <label class="col-sm-3 control-label" for="nhanvien_thuongtru_btdtt_id">Phường/Xã</label>
-
+                <label class="col-sm-3 control-label" for="thuongtru_btdpxa_id_btdquan_id">Phường/Xã</label>
                 <div class="col-sm-9">
-                  <%= grouped_collection_select(:thuongtru_btdpxa_id, :btdquan_id, Btdquan.order(:ten_vi), :btdpxas, :ten_vi, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
+                  <%= f.grouped_collection_select(:thuongtru_btdpxa_id, Btdquan.order(:ten_vi), :btdpxas, :ten_vi, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
                 </div>
               </div>
             </div>
@@ -104,30 +95,26 @@
             <div class="col-sm-12">
               <div class="form-group form-group-sm">
                 <label class="col-sm-3 control-label" for="nhanvien_diachitamtru">Địa chỉ</label>
-
                 <div class="col-sm-9">
                   <%= f.text_field :diachitamtru, :class => "form-control input-sm" %>
                 </div>
               </div>
               <div class="form-group form-group-sm">
                 <label class="col-sm-3 control-label" for="nhanvien_tamtru_btdtt_id">Tỉnh/TP</label>
-
                 <div class="col-sm-9">
                   <%= f.collection_select(:tamtru_btdtt_id, Btdtt.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
                 </div>
               </div>
               <div class="form-group form-group-sm">
                 <label class="col-sm-3 control-label" for="nhanvien_tamtru_btdquan_id">Quận/Huyện</label>
-
                 <div class="col-sm-9">
-                  <%= grouped_collection_select(:tamtru_btdquan_id, :btdtt_id, Btdtt.order(:ten_vi), :btdquans, :ten_vi, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
+                  <%= f.grouped_collection_select(:tamtru_btdquan_id, Btdtt.order(:ten_vi), :btdquans, :ten_vi, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
                 </div>
               </div>
               <div class="form-group form-group-sm">
                 <label class="col-sm-3 control-label" for="nhanvien_tamtru_btdpxa_id">Phường/Xã</label>
-
                 <div class="col-sm-9">
-                  <%= grouped_collection_select(:tamtru_btdpxa_id, :btdquan_id, Btdquan.order(:ten_vi), :btdpxas, :ten_vi, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
+                  <%= f.grouped_collection_select(:tamtru_btdpxa_id, Btdquan.order(:ten_vi), :btdpxas, :ten_vi, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control input-sm"}) %>
                 </div>
               </div>
             </div>

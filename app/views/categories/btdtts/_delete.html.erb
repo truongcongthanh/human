@@ -5,10 +5,10 @@
   Bạn có muốn xóa thông tin này hay không?
 </div>
 <div class="modal-footer">
-  <%= link_to categories_dmquoctich_path(@dmquoctich), method: :delete, :data => {remote: true}, class: "btn btn-danger" do %>
+  <%= link_to categories_btdtt_path(@btdtt), method: :delete, :data => {remote: true}, class: "btn btn-danger" do %>
       <i class="glyphicon glyphicon-ok-sign"></i> Đồng ý
   <% end %>
-  <%= link_to categories_dmquoctiches_path, class: "btn btn-default", data: {dismiss: "modal"} do %>
+  <%= link_to categories_btdtts_path, class: "btn btn-default", data: {dismiss: "modal"} do %>
       <i class="glyphicon glyphicon-remove-sign"></i> Không
   <% end %>
 </div>

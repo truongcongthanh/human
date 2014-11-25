@@ -1,11 +1,11 @@
 <h4>
-  <span class='glyphicon glyphicon-list'></span>Danh sách vùng địa lý
-  <%= link_to new_categories_dmquoctich_path, :data => {remote: true}, :class => "btn btn-link pull-right" do %>
+  <span class='glyphicon glyphicon-list'></span>Danh sách phường/xã
+  <%= link_to new_categories_btdpxa_path, :data => {remote: true}, :class => "btn btn-link pull-right" do %>
       <span class="fa fa-plus-square fa-fw"></span> Thêm mới
   <% end %>
 </h4>
 <div class="form-index">
-  <%= render 'table_quoctich' %>
+  <%= render 'table_phuongxa' %>
 </div>
 <div id="form-modal" class="modal fade">
   <div class="modal-dialog">

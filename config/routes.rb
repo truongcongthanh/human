@@ -16,6 +16,18 @@ Rails.application.routes.draw do
     resources :dmquoctiches do
       get "delete"
     end
+
+    resources :btdtts do
+      get "delete"
+    end
+
+    resources :btdquans do
+      get "delete"
+    end
+
+    resources :btdpxas do
+      get "delete"
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

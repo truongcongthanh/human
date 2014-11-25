@@ -1,0 +1,44 @@
+<%= form_for ([:categories, @btdpxa]), :data => {remote: true}, :html => {:class => "form-horizontal", role: "form"} do |f| %>
+    <div class="row text-center" style="padding: 15px;">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label for="btdtt_ten_vn" class="col-sm-4 control-label">Tên phường/xã VN</label>
+          <div class="col-sm-8">
+            <%= f.text_field :ten_vi, :class => "form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="btdtt_ten_en" class="col-sm-4 control-label">Tên phường/xã EN</label>
+          <div class="col-sm-8">
+            <%= f.text_field :ten_en, :class => "form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="btdtt_ten_ot" class="col-sm-4 control-label">Tên phường/xã JP</label>
+          <div class="col-sm-8">
+            <%= f.text_field :ten_ot, :class => "form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="btdtt_ten_ot" class="col-sm-4 control-label">Quận/Huyện</label>
+          <div class="col-sm-8">
+            <%= f.collection_select(:btdquan_id, Btdquan.all, :id, :ten_vi, {prompt: "-- Chọn --"}, {class: "form-control"}) %>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="btdtt_ten_ot" class="col-sm-4 control-label">Viết tắt</label>
+          <div class="col-sm-8">
+            <%= f.text_field :viettat, :class => "form-control" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <%= link_to categories_btdpxas_path, class: "btn btn-default", data: {dismiss: "modal"} do %>
+          <%= t "back" %>
+      <% end %>
+      <button type="submit" class="btn btn-primary">
+        <%= t "save" %>
+      </button>
+    </div>
+<% end %>

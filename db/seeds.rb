@@ -34,3 +34,4 @@
 #                    {ten_vi: 'Nhóm chức vụ Đoàn'}, {ten_vi: 'Nhóm chức vụ Công Đoàn'}, {ten_vi: 'Nhóm khác'}])
 
 # Tongiao.create([{ten_vi: 'Không'},{ten_vi: 'Phật giáo'},{ten_vi: 'Thiên Chúa giáo'}, {ten_vi: 'Cao Đài'}, {ten_vi: 'Tin lành'},{ten_vi: 'Hồi giáo'},{ten_vi: 'Phật giáo Hòa Hảo'}])
+

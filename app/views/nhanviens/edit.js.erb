@@ -1,6 +1,67 @@
 $(".form-index").html("<%= escape_javascript(render 'edit') %>");
 $(".form-index-header").html("<span class='glyphicon glyphicon-edit'></span>Cập nhật thông tin nhân viên");
 
+$(function(){
+    var thuongtru_quan = $("#nhanvien_thuongtru_btdquan_id").html();
+    $("#nhanvien_thuongtru_btdtt_id").change(function(){
+        var thuongtru_tinh = $("#nhanvien_thuongtru_btdtt_id :selected").text();
+        var options1 = $(thuongtru_quan).filter("optgroup[label='" + thuongtru_tinh + "']").html();
+        if(options1)
+        {
+            $("#nhanvien_thuongtru_btdquan_id").html(options1);
+        }
+        else
+        {
+            $("#nhanvien_thuongtru_btdquan_id").html("");
+        }
+    });
+
+    var thuongtru_xa = $("#nhanvien_thuongtru_btdpxa_id").html();
+    $("#nhanvien_thuongtru_btdquan_id").change(function(){
+        var thuongtru_quan = $("#nhanvien_thuongtru_btdquan_id :selected").text();
+        var options2 = $(thuongtru_xa).filter("optgroup[label='" + thuongtru_quan + "']").html();
+        if(options2)
+        {
+            $("#nhanvien_thuongtru_btdpxa_id").html(options2);
+        }
+        else
+        {
+            $("#nhanvien_thuongtru_btdpxa_id").html("");
+        }
+    });
+
+    var tamtru_quan = $("#nhanvien_tamtru_btdquan_id").html();
+    $("#nhanvien_tamtru_btdtt_id").change(function(){
+        var tamtru_tinh = $("#nhanvien_tamtru_btdtt_id :selected").text();
+        var options1 = $(tamtru_quan).filter("optgroup[label='" + tamtru_tinh + "']").html();
+        if(options1)
+        {
+            $("#nhanvien_tamtru_btdquan_id").html(options1);
+        }
+        else
+        {
+            $("#nhanvien_tamtru_btdquan_id").html("");
+        }
+    });
+
+    var tamtru_xa = $("#nhanvien_tamtru_btdpxa_id").html();
+    $("#nhanvien_tamtru_btdquan_id").change(function(){
+        var tamtru_quan = $("#nhanvien_tamtru_btdquan_id :selected").text();
+        var options2 = $(tamtru_xa).filter("optgroup[label='" + tamtru_quan + "']").html();
+        if(options2)
+        {
+            $("#nhanvien_tamtru_btdpxa_id").html(options2);
+        }
+        else
+        {
+            $("#nhanvien_tamtru_btdpxa_id").html("");
+        }
+    });
+});
+if(!$("#nhanvien_thuongtru_btdtt_id :selected").text())
+{
+    $("#nhanvien_thuongtru_btdquan_id").html("");
+}
 // Kiểm tra có phải là đảng viên hay không
 if($("#nhanvien_dangvien").is(':checked')){
     $("#nhanvien_ngaydubidang").removeAttr("disabled", "disable");
